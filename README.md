@@ -33,3 +33,11 @@ Acesse a aba **Contas a pagar** para cadastrar descrição, valor total, primeir
 É possível editar ou excluir um vencimento individual, marcar como pago ou reabrir e exportar a lista filtrada em CSV. Os resumos consideram o mês de vencimento selecionado, inclusive o resumo de próximos sete dias (hoje mais seis dias). Marcar como pago é apenas controle: não executa pagamentos, não se conecta ao banco e não altera a margem das vendas.
 
 Os dados usam a chave `soraseller-payables-v1` no localStorage deste navegador. Não há sincronização, importação do CSV ou backup em servidor. Guarde os CSVs de cada mês; limpar dados do navegador remove os registros. Falhas de leitura não sobrescrevem dados existentes; falhas de gravação mantêm o formulário; alterações em outra aba bloqueiam uma gravação desatualizada.
+
+## Página inicial e entrada
+
+A raiz abre a página pública (`#home`). `#login` mostra a prévia visual de acesso, com cartão translúcido, iluminação em verde e entrada na demonstração. A identidade visual é uma composição original inspirada na referência HTML enviada, sem depender dos scripts, imagens, rastreadores ou arquivos remotos dela.
+
+**Não existe autenticação nesta etapa.** O e-mail da prévia é opcional, validado somente pelo navegador e não é enviado nem armazenado. O botão “Explorar demonstração” leva ao painel sem criar sessão, conta ou proteção de acesso. As rotas `#dashboard` e `#payables` seguem acessíveis diretamente. Para login real serão necessários provedor de identidade, sessões e autorização no backend; esconder o painel no frontend não protege dados.
+
+No painel, “Voltar ao início” retorna à página pública sem apagar os dados locais. Os estilos públicos estão isolados em `entry.css` e o comportamento em `entry.js`.
