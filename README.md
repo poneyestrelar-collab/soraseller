@@ -41,3 +41,11 @@ A raiz abre a página pública (`#home`). `#login` mostra a prévia visual de ac
 **Não existe autenticação nesta etapa.** O e-mail da prévia é opcional, validado somente pelo navegador e não é enviado nem armazenado. O botão “Explorar demonstração” leva ao painel sem criar sessão, conta ou proteção de acesso. As rotas `#dashboard` e `#payables` seguem acessíveis diretamente. Para login real serão necessários provedor de identidade, sessões e autorização no backend; esconder o painel no frontend não protege dados.
 
 No painel, “Voltar ao início” retorna à página pública sem apagar os dados locais. Os estilos públicos estão isolados em `entry.css` e o comportamento em `entry.js`.
+
+## WhatsApp, relatórios e notificações
+
+O painel agora usa o tema escuro verde-floresta/menta da página inicial. Em **WhatsApp e relatórios**, prepare as preferências locais e visualize faturamento diário, semanal, mensal e margem diária. É possível copiar o texto ou abrir o WhatsApp para enviar manualmente; preferências salvas não ativam automação.
+
+A aba **Notificações** tem sino com contador, leitura e simulação de venda com valor, lucro e margem. Até 50 pedidos simulados e seus alertas são preservados no navegador e somados aos dados demonstrativos de 29/10/2026. Avisos do navegador são opcionais e dependem de permissão e do site aberto.
+
+**Automação real pendente:** ainda não há API de WhatsApp, backend/agendador nem fonte de vendas reais. O usuário informou não ter provedor. O caminho recomendado e as dependências estão em `docs/whatsapp-and-notifications.md`. Nenhum token deve ser colocado no frontend ou no repositório público.
