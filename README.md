@@ -25,3 +25,11 @@ Endereço esperado após a publicação: https://poneyestrelar-collab.github.io/
 ## Revisão de interface
 
 A revisão baseada na skill Visant Killer está documentada em `docs/audits/visant-soraseller.md`, com alterações, verificações e limites de cobertura. Ícones Lucide 0.468.0 (ISC), licença em `assets/lucide-LICENSE`.
+
+## Contas a pagar
+
+Acesse a aba **Contas a pagar** para cadastrar descrição, valor total, primeiro vencimento, parcelas e status. Categoria, fornecedor, forma de pagamento e observações ficam disponíveis no formulário. O calendário começa no mês atual, usa a data de São Paulo e permite filtrar a lista por dia. Parcelas mensais preservam o dia original e se ajustam ao último dia de meses menores; o valor total é dividido em centavos, sem diferenças na soma.
+
+É possível editar ou excluir um vencimento individual, marcar como pago ou reabrir e exportar a lista filtrada em CSV. Os resumos consideram o mês de vencimento selecionado, inclusive o resumo de próximos sete dias (hoje mais seis dias). Marcar como pago é apenas controle: não executa pagamentos, não se conecta ao banco e não altera a margem das vendas.
+
+Os dados usam a chave `soraseller-payables-v1` no localStorage deste navegador. Não há sincronização, importação do CSV ou backup em servidor. Guarde os CSVs de cada mês; limpar dados do navegador remove os registros. Falhas de leitura não sobrescrevem dados existentes; falhas de gravação mantêm o formulário; alterações em outra aba bloqueiam uma gravação desatualizada.
