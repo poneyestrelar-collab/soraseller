@@ -1,0 +1,5 @@
+const themeStorageKey='soraseller-theme';
+let selectedTheme='light';
+try{if(localStorage.getItem(themeStorageKey)==='dark')selectedTheme='dark';}catch{/* Branco continua como padrão quando o armazenamento não está disponível. */}
+function applyTheme(){document.body.dataset.theme=selectedTheme;const select=document.querySelector('#theme-select');if(select)select.value=selectedTheme;document.querySelector('meta[name="theme-color"]').content=document.body.classList.contains('public-view')?'#09110e':selectedTheme==='dark'?'#0b1410':'#ffffff';}
+function initTheme(){applyTheme();document.querySelector('#theme-select').onchange=e=>{selectedTheme=e.target.value==='dark'?'dark':'light';applyTheme();try{localStorage.setItem(themeStorageKey,selectedTheme);}catch{toast('Tema alterado nesta sessão. Não foi possível salvar a preferência no navegador.');}};window.addEventListener('storage',e=>{if(e.key===themeStorageKey||e.key===null){selectedTheme=e.newValue==='dark'?'dark':'light';applyTheme();}});}

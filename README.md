@@ -49,3 +49,7 @@ O painel agora usa o tema escuro verde-floresta/menta da página inicial. Em **W
 A aba **Notificações** tem sino com contador, leitura e simulação de venda com valor, lucro e margem. Até 50 pedidos simulados e seus alertas são preservados no navegador e somados aos dados demonstrativos de 29/10/2026. Avisos do navegador são opcionais e dependem de permissão e do site aberto.
 
 **Automação real pendente:** ainda não há API de WhatsApp, backend/agendador nem fonte de vendas reais. O usuário informou não ter provedor. O caminho recomendado e as dependências estão em `docs/whatsapp-and-notifications.md`. Nenhum token deve ser colocado no frontend ou no repositório público.
+
+## Aparência do painel
+
+O painel abre em **Branco** por padrão. O seletor **Aparência**, no topo, alterna entre Branco e Modo escuro sem recarregar a página nem descartar formulários. A preferência usa `soraseller-theme` no navegador e é sincronizada entre abas. A página inicial e a prévia de login mantêm sua identidade visual original.
