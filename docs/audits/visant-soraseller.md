@@ -127,3 +127,7 @@ Nenhuma aplicada além das correções acima. Tema escuro e mudanças de identid
 - copy-lint e análise automática de componentes React: indisponíveis ou incompatíveis com esta base.
 - Leitor de tela, Safari/iOS e performance em dispositivo real.
 - Integrações, autenticação e backend: não existem nesta demonstração.
+
+## Ajuste solicitado após a revisão: destaque do faturamento diário
+
+O usuário solicitou uma faixa de faturamento semelhante à referência enviada. Essa orientação substitui a decisão anterior de manter quatro cartões neutros e sete dias como padrão. O painel passa a abrir em Hoje (data fixa da demonstração), com faturamento em maior tamanho, lucro e margem imediatamente abaixo. Pedidos, ticket e lucro médio ficam nos cartões de apoio. Os filtros atualizam o título e todos os valores em conjunto. Validado no Chromium em 1440, 768, 390 e 360 px sem overflow; conferidos cálculo da margem, filtros e busca de vendas. A faixa é uma composição das métricas e filtros existentes, solicitada explicitamente pelo usuário.
