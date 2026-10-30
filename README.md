@@ -14,10 +14,14 @@ npm run dev
 
 O servidor escuta na porta 3000 (ou na variável `PORT`). Para verificar a sintaxe: `npm run check`.
 
-Os custos ficam no localStorage do navegador. Não há autenticação, backend de negócios, sincronização ou integração real com marketplaces. Os pedidos demonstrativos têm datas fixas de outubro de 2026. A tipografia remota é opcional e possui fontes locais de fallback.
+Os custos ficam no localStorage do navegador. Não há autenticação, backend de negócios, sincronização ou integração real com marketplaces. Os pedidos demonstrativos têm datas fixas de outubro de 2026. A tipografia usa fontes locais, sem requisições externas.
 
 ## Abrir pelo GitHub Pages
 
 Em Settings → Pages, selecione Deploy from a branch, branch main e pasta / (root). Salve e aguarde a publicação.
 
 Endereço esperado após a publicação: https://poneyestrelar-collab.github.io/soraseller/
+
+## Revisão de interface
+
+A revisão baseada na skill Visant Killer está documentada em `docs/audits/visant-soraseller.md`, com alterações, verificações e limites de cobertura. Ícones Lucide 0.468.0 (ISC), licença em `assets/lucide-LICENSE`.
