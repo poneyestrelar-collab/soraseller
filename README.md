@@ -53,3 +53,9 @@ A aba **Notificações** tem sino com contador, leitura e simulação de venda c
 ## Aparência do painel
 
 O painel abre em **Branco** por padrão. O seletor **Aparência**, no topo, alterna entre Branco e Modo escuro sem recarregar a página nem descartar formulários. A preferência usa `soraseller-theme` no navegador e é sincronizada entre abas. A página inicial e a prévia de login mantêm sua identidade visual original.
+
+## Gráficos de vendas e custos
+
+Os cartões **Evolução das vendas** e **Custos das vendas** usam uma adaptação visual dos frames Overview Chart e Portfolio Allocation Chart encontrados no Figma fornecido. São implementações locais em `charts.js`/`charts.css`, sem React ou registry instalado. O gráfico de barras permite alternar faturamento/lucro e consultar horas/dias; os segmentos de custos mostram percentuais e valores ao selecionar categorias. Ambos respeitam os filtros e temas.
+
+A decomposição financeira por pedido usa valores em centavos, incluindo impostos arredondados por pedido, para reconciliar painel, gráfico, pedidos e relatórios. Detalhes e verificação em `docs/mebius-charts-adaptation.md`.
